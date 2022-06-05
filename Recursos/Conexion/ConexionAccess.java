@@ -1,6 +1,5 @@
 package Recursos.Conexion;
 import java.sql.*;
-import java.util.*;
 import javax.swing.*;
 public class ConexionAccess {
     Connection c=null;
@@ -9,8 +8,8 @@ public class ConexionAccess {
 
     public ConexionAccess(){
         try {
-            String rutaDb="C:\\Users\\steph\\OneDrive\\Documentos\\GitHub\\SistemaContable\\BaseDeDatos.accdb";
-            String url="";
+            String rutaDb="https://github.com/StephTeno/SistemaContable/blob/80063a04506939eb7480ed533aa6c9f5f16c95de/BaseDeDatos.accdb";
+            String url="jdbx:ucanaccess://"+rutaDb;
             c=DriverManager.getConnection(url);
             st=c.createStatement();
 
