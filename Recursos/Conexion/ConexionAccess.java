@@ -12,6 +12,7 @@ public class ConexionAccess {
             String url="jdbx:ucanaccess://"+rutaDb;
             c=DriverManager.getConnection(url);
             st=c.createStatement();
+            JOptionPane.showMessageDialog(null, "Conectado a la Base de Datos");
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error al Conectar con la Base de Datos"+e);
